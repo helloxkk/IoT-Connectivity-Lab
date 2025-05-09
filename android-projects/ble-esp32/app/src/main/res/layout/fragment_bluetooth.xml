@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="状态信息"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/buttonFindDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查找设备"/>
+
+        <Button
+            android:id="@+id/buttonConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="连接设备"/>
+
+        <Button
+            android:id="@+id/buttonDisconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="断开设备"/>
+
+        <TextView
+            android:id="@+id/textViewRedValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红色: 0"/>
+
+        <SeekBar
+            android:id="@+id/seekBarRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"/>
+
+        <TextView
+            android:id="@+id/textViewGreenValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绿色: 0"/>
+
+        <SeekBar
+            android:id="@+id/seekBarGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"/>
+
+        <TextView
+            android:id="@+id/textViewBlueValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝色: 0"/>
+
+        <SeekBar
+            android:id="@+id/seekBarBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"/>
+
+        <Button
+            android:id="@+id/buttonSendColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发送颜色"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
