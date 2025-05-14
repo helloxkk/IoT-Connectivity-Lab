@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "build.warn_data_percentage=75",
+  "fqbn": "esp32:esp32:esp32c6",
+  "hardwareFolders": "/Users/xiaokun/Library/Arduino15/packages",
+  "otherLibrariesFolders": "/Users/xiaokun/Documents/Arduino/libraries",
+  "sketchLocation": "/Users/xiaokun/Downloads/ESP32-C6-LCD-1.47-Demo 3/Arduino/examples/LVGL_Arduino/tmp/LVGL_Arduino"
+}
