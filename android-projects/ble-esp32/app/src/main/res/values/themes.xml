@@ -22,4 +22,9 @@
     <style name="Theme.esp32Ble.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.esp32Ble.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SwitchCompatTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#007AFF</item>
+        <item name="android:colorControlActivated">#007AFF</item>
+    </style>
 </resources>

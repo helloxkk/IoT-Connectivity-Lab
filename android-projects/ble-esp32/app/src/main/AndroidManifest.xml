@@ -15,18 +15,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.esp32Ble">
-        <activity
-            android:name="cn.hellokk.ble.ui.ViewPagerActivity"
-            android:exported="true"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 <!--        <activity-->
-<!--            android:name=".MainActivity"-->
+<!--            android:name="cn.hellokk.ble.ui.ViewPagerActivity"-->
 <!--            android:exported="true"-->
 <!--            android:label="@string/app_name">-->
 <!--            <intent-filter>-->
@@ -35,6 +25,31 @@
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
 <!--        </activity>-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.DeviceControlActivity"/>
+
+        <activity android:name=".ui.DeviceDetailsActivity"/>
+
+        <activity android:name=".ui.ScanDevicesActivity"/>
+
+        <activity android:name=".ui.ScenesActivity"/>
+
+        <activity android:name=".ui.SceneDetailActivity"/>
+
+        <activity android:name=".ui.ProfileActivity"/>
+
+        <activity android:name=".ui.NotificationsActivity"/>
+
     </application>
 
 </manifest>

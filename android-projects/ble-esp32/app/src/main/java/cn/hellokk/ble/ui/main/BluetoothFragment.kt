@@ -15,15 +15,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
+import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import cn.hellokk.ble.R
 import cn.hellokk.ble.databinding.FragmentBluetoothBinding
 import java.util.*
+import kotlin.math.sin
 
+/**
+ * 作者: Kun on 2025/5/10.
+ * 邮箱: vip@hellokk.cc.
+ * 描述: 蓝牙控制页面
+ */
 @SuppressLint("MissingPermission")
 @RequiresApi(Build.VERSION_CODES.M)
 class BluetoothFragment : Fragment() {
@@ -37,9 +43,9 @@ class BluetoothFragment : Fragment() {
     private var bluetoothGatt: BluetoothGatt? = null
     private var colorCharacteristic: BluetoothGattCharacteristic? = null
 
-    private var redValue: Byte = 0
-    private var greenValue: Byte = 0
-    private var blueValue: Byte = 0
+    private var redValue: Int = 0
+    private var greenValue: Int = 0
+    private var blueValue: Int = 0
 
     // UUID 定义
     private val SERVICE_UUID = UUID.fromString("0000180F-0000-1000-8000-00805f9b34fb")
@@ -58,7 +64,22 @@ class BluetoothFragment : Fragment() {
         initBluetoothManager()
         requestBluetoothPermissions()
         initListener()
+        initSeekBar()
         return binding.root
+    }
+
+    private fun initSeekBar() {
+        binding.colorSeekBar.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                redValue = progress
+                greenValue = 255 - redValue // 示例变化
+                blueValue = (sin((redValue / 255.0) * Math.PI) * 255).toInt() // 示例变化
+                binding.textViewRedValue.text = String.format("RGB: (%d, %d, %d)", redValue, greenValue, blueValue)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar) {}
+        })
     }
 
     companion object {
@@ -130,32 +151,6 @@ class BluetoothFragment : Fragment() {
             sendColor(redValue, greenValue, blueValue) // 发送选定的颜色
         }
 
-        // 进度条设置
-        binding.seekBarRed.setOnSeekBarChangeListener(colorSeekBarChangeListener)
-        binding.seekBarGreen.setOnSeekBarChangeListener(colorSeekBarChangeListener)
-        binding.seekBarBlue.setOnSeekBarChangeListener(colorSeekBarChangeListener)
-    }
-
-    private val colorSeekBarChangeListener = object : SeekBar.OnSeekBarChangeListener {
-        override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-            when (seekBar?.id) {
-                R.id.seekBarRed -> {
-                    redValue = progress.toByte()
-                    binding.textViewRedValue.text = "红色: $progress"
-                }
-                R.id.seekBarGreen -> {
-                    greenValue = progress.toByte()
-                    binding.textViewGreenValue.text = "绿色: $progress"
-                }
-                R.id.seekBarBlue -> {
-                    blueValue = progress.toByte()
-                    binding.textViewBlueValue.text = "蓝色: $progress"
-                }
-            }
-        }
-
-        override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-        override fun onStopTrackingTouch(seekBar: SeekBar?) {}
     }
 
     private fun startDiscovery() {
@@ -192,7 +187,7 @@ class BluetoothFragment : Fragment() {
             bluetoothAdapter?.cancelDiscovery()
             activity?.unregisterReceiver(receiver)
             binding.textViewStatus.append("\n设备查找结束")
-        }, 12000) // 12秒后停止发现
+        }, 10000) // 10秒后停止发现
     }
 
     private fun connectToDevice(device: BluetoothDevice) {
@@ -207,7 +202,7 @@ class BluetoothFragment : Fragment() {
         binding.textViewStatus.append("\n设备已断开连接")
     }
 
-    private fun sendColor(red: Byte, green: Byte, blue: Byte) {
+    private fun sendColor(red: Int, green: Int, blue: Int) {
         if (bluetoothGatt != null && colorCharacteristic != null) {
             val colorString = String(charArrayOf(red.toChar(), green.toChar(), blue.toChar()))
             colorCharacteristic?.setValue(colorString)

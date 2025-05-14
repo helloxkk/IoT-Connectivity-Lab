@@ -9,4 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="f6f6f6">#f6f6f6</color>
     <color name="color_3a89ff">#3788fe</color>
+
+    <color name="colorPrimary">#007AFF</color>
+    <color name="colorPrimaryDark">#0062CC</color>
+    <color name="colorAccent">#007AFF</color>
+    <color name="colorBackground">#F8F8F8</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorGray">#8E8E8E</color>
+    <color name="colorLightGray">#E0E0E0</color>
+    <color name="colorOnline">#34C759</color>
+    <color name="colorOffline">#FF3B30</color>
+    <color name="ripple_color">#33007AFF</color>
 </resources>

@@ -5,13 +5,44 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.125" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1505" />
+        <entry key="app/src/main/res/drawable/bottom_nav_color.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/brightness_seekbar_background.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/button_primary.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/button_secondary.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/circle_led.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/edit_text_background.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/hue_seekbar_background.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/ic_bluetooth.xml" value="0.148" />
         <entry key="app/src/main/res/drawable/ic_launcher1_background.xml" value="0.1505" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1395" />
+        <entry key="app/src/main/res/drawable/scan_pulse_1.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/scan_pulse_2.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/scan_pulse_3.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/scan_pulse_4.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/scanning_animation.xml" value="0.148" />
         <entry key="app/src/main/res/drawable/scroll_bg.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/search_background.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/seekbar_progress_drawable.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/seekbar_thumb.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/selected_color_border.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/selected_tab_background.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/signal_strength_bg.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/tab_background.xml" value="0.148" />
+        <entry key="app/src/main/res/drawable/unselected_tab_background.xml" value="0.148" />
         <entry key="app/src/main/res/layout/activity_code.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_device_control.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/activity_device_details.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.16893115942028986" />
+        <entry key="app/src/main/res/layout/activity_notifications.xml" value="1.0838815789473684" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/activity_scan_devices.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/activity_scene_detail.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/activity_scenes.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/activity_view_pager.xml" value="0.23072916666666668" />
+        <entry key="app/src/main/res/layout/bottom_navigation_menu.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/dialog_edit_text.xml" value="1.0838815789473684" />
+        <entry key="app/src/main/res/layout/fragment_bluetooth.xml" value="0.2768721931248813" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1546875" />
         <entry key="app/src/main/res/layout/fragment_health_check_in.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
@@ -20,6 +51,11 @@
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_place_check_in.xml" value="0.26729278564453124" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.21666666666666667" />
+        <entry key="app/src/main/res/layout/item_color.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/item_device.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_found_device.xml" value="0.3442822384428224" />
+        <entry key="app/src/main/res/layout/item_main_device.xml" value="0.3958333333333333" />
+        <entry key="app/src/main/res/layout/item_scene.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher1.xml" value="0.1395" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher1_round.xml" value="0.1395" />
